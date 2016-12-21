@@ -1,0 +1,19 @@
+{
+	"ARCLINK":{
+		"name":"ARCLINK",
+		"user":"rsam",
+		"serverIP":"192.XXX.XXX.XXX",
+		"port":"18001"
+	},
+	
+	"SEEDLINK":{
+		"name":"SEEDLINK",
+		"serverIP":"192.XXX.XXX.XXX",
+		"port":"18000"
+	},
+	"ARCHIVE":{
+		"name":"ARCHIVE",
+		"archivePath":"/mnt/sc3"
+	}
+
+}

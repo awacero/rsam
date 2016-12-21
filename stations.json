@@ -1,0 +1,26 @@
+{ 
+
+"REVS_BD":{
+	"net":"EC",
+	"cod":"REVS",
+	"loc":["01","02"],
+	"cha":["BDF"]
+},
+
+"REVS_HH":{
+	"net":"EC",
+	"cod":"REVS",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+"ANGU_HH":{
+	"net":"EC",
+	"cod":"ANGU",
+	"loc":[""],
+	"cha":["HHZ"]
+}
+
+
+
+
+}
