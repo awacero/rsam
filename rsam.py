@@ -6,18 +6,15 @@ Created on 11/06/2015
 '''
 
 from obspy.signal import filter
-#from datetime import timedelta,datetime
 import numpy as np
 import os
 import logging
 
-#from obspy.core import UTCDateTime
 from obspy.clients.arclink import Client as clientArclink
 from obspy.clients.seedlink import Client as clientSeedlink
 from obspy.clients.filesystem.sds import Client as clientArchive
 import DBConexion
 import json
-
 
 def getRMS(datosFlujo):
     """
@@ -102,44 +99,6 @@ def readConfigFile(jsonFile):
     except Exception as e:
         print("Error readConfigFile(): %s" %str(e))
         return -1
-'''
-def getStore(conDB,service,conSrv,net,cod,loc,cha,dUTC,update):
-    print('Starting station: %s %s %s %s' %(net,cod,loc,cha))
-    if service=='ARCLINK':
-        try:
-            streamStat=conSrv.get_waveforms(net,cod,loc,cha,dUTC,dUTC + 60,route=False,compressed=False)
-        except Exception as e:
-            print("Error getting streamStat: %s" %str(e))
-    else:
-        try:
-            streamStat=conSrv.get_waveforms(net,cod,loc,cha,dUTC,dUTC + 60)
-        except Exception as e:
-            print("Error getting streamStat: %s" %str(e))
-            
-    if len(streamStat)>0:
-        print("Starting calculateRSAM()")
-        print(streamStat)
-        fillRMS(streamStat,dUTC)
-    else:
-        print("insertar 0")
-        fillZeros(sta['cod'], cha, dUTC)  
-    
-    print(rmsData)
-    if update:
-        DBConexion.insertRow(conDB,rmsData)
-    else:
-        DBConexion.updateRow(conDB,rmsData)
-
-
-def rsam(stations,dUTC,service,conSrv,conDB,update):
-    
-    for stname,sta in stations.iteritems():        
-        for loc in sta['loc']:
-            for cha in sta['cha']:
-                print(sta['net'],sta['cod'],loc,cha)
-                getStore(conDB,service,conSrv,sta['net'],sta['cod'],loc,cha,dUTC,update)
-'''
-
 
 
 def getStream(service,conSrv,net,cod,loc,cha,dUTC):
@@ -203,61 +162,8 @@ def rsamUpdate(stations,dUTC,service,conSrv,conDB):
 rmsData={'rsam_estacion':'','rsam_canal':'','rsam_fecha_proceso':'','rms':'','rsam_banda1':'','rsam_banda2':'','rsam_banda3':'','rsam_banda4':''} 
 
 
-'''
-rmsData={'rsam_estacion':'','rsam_canal':'','rsam_fecha_proceso':'','rms':'','rsam_banda1':'','rsam_banda2':'','rsam_banda3':'','rsam_banda4':''} 
-execDir=os.path.realpath(os.path.dirname(__file__))
-logging.basicConfig(filename=os.path.join(execDir,"rsam.log"),level=logging.DEBUG)
-
-configurationFile='serverConfiguration.json'
-stationsFile="stations.json"
-servicio='ARCLINK'
-
-DB="DEV"
-conexionFile='DBConfiguration.json'
-
-prmDB=readConfigFile(conexionFile)
-if prmDB==-1:
-    print("Error reading configuration file: %s" %conexionFile)
-    exit(-1)
-
-serviceParam=readConfigFile(configurationFile)
-if  serviceParam == -1:
-    print("Error reading configuration file: %s" %configurationFile)
-    exit(-1)
-    
-conexion=chooseService(serviceParam[servicio])
-if conexion == -1:
-    print("Error connecting service: %s" %servicio)
-    exit(-1)
-
-stations=readConfigFile(stationsFile)
-if stations==-1:
-    print("Error reading stations file: %s" %stationsFile)
-    exit(-1)
-
-con=DBConexion.createConexionDB(prmDB[DB]['host'], prmDB[DB]['port'], prmDB[DB]['user'], prmDB[DB]['pass'], prmDB[DB]['DBName'])
-if con==-1:
-    print("Error in createConexionDB %s" %(prmDB[DB]))
-    exit(-1)
-
-
-diaString=datetime.now().strftime('%Y-%m-%d %H:%M:00')
-diaUTC=UTCDateTime(diaString) - 60
-#diaUTC=UTCDateTime('2016-12-16 19:08:00')
-diaUTC=UTCDateTime('2016-12-28 10:28:00')
-
-'''
 
 
 
 
-#rsam(stations)
 
-'''
-for stname,sta in stations.iteritems():
-    print stname
-    for loc in sta['loc']:
-        for cha in sta['cha']:
-            print(sta['net'],sta['cod'],loc,cha)
-            getStore(con,servicio,sta['net'],sta['cod'],loc,cha,diaUTC)
-'''
