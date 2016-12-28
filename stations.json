@@ -1,24 +1,271 @@
 { 
 
-"REVS_BD":{
+"BMAS":{
 	"net":"EC",
-	"cod":"REVS",
-	"loc":["01","02"],
-	"cha":["BDF"]
+	"cod":"BMAS",
+	"loc":[""],
+	"cha":["BHZ"]
 },
 
-"REVS_HH":{
+"BNAS":{
 	"net":"EC",
-	"cod":"REVS",
+	"cod":"BNAS",
 	"loc":[""],
-	"cha":["HHZ"]
+	"cha":["BHZ"]
 },
-"ANGU_HH":{
+
+"BREF":{
+	"net":"EC",
+	"cod":"BREF",
+	"loc":[""],
+	"cha":["BHZ"]
+},
+
+"BRRN":{
+	"net":"EC",
+	"cod":"BRRN",
+	"loc":[""],
+	"cha":["BHZ"]
+},
+
+"BTAM":{
+	"net":"EC",
+	"cod":"BTAM",
+	"loc":[""],
+	"cha":["BHZ"]
+},
+
+"BVC2":{
+	"net":"EC",
+	"cod":"BVC2",
+	"loc":[""],
+	"cha":["BHZ"]
+},
+
+"SRAM":{
+	"net":"EC",
+	"cod":"SRAM",
+	"loc":[""],
+	"cha":["BHZ"]
+},
+
+"SUCR":{
+	"net":"EC",
+	"cod":"SUCR",
+	"loc":[""],
+	"cha":["BHZ"]
+},
+
+"TOMA":{
+	"net":"EC",
+	"cod":"TOMA",
+	"loc":[""],
+	"cha":["BHZ"]
+},
+
+"ANGU":{
 	"net":"EC",
 	"cod":"ANGU",
 	"loc":[""],
 	"cha":["HHZ"]
+},
+
+"ANTS":{
+	"net":"EC",
+	"cod":"ANTS",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"BRTU":{
+	"net":"EC",
+	"cod":"BRTU",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"BTER":{
+	"net":"EC",
+	"cod":"BTER",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"CAYA":{
+	"net":"EC",
+	"cod":"CAYA",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"CAYA":{
+	"net":"EC",
+	"cod":"CAYA",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"COTA":{
+	"net":"EC",
+	"cod":"COTA",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+
+"CUIC":{
+	"net":"EC",
+	"cod":"CUIC",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+
+"FER2":{
+	"net":"EC",
+	"cod":"FER2",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+
+"IMBA":{
+	"net":"EC",
+	"cod":"IMBA",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"POND":{
+	"net":"EC",
+	"cod":"POND",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"PULU":{
+	"net":"EC",
+	"cod":"PULU",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"REVN":{
+	"net":"EC",
+	"cod":"REVN",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"REVS":{
+	"net":"EC",
+	"cod":"REVS",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+
+"SAGA":{
+	"net":"EC",
+	"cod":"SAGA",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+
+"SLOR":{
+	"net":"EC",
+	"cod":"SLOR",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+"VCES":{
+	"net":"EC",
+	"cod":"VCES",
+	"loc":[""],
+	"cha":["HHZ"]
+},
+
+
+"CAYR":{
+	"net":"EC",
+	"cod":"CAYR",
+	"loc":[""],
+	"cha":["SHZ"]
+},
+
+
+"CONE":{
+	"net":"EC",
+	"cod":"CONE",
+	"loc":[""],
+	"cha":["SHZ"]
+},
+
+"ECEN":{
+	"net":"EC",
+	"cod":"ECEN",
+	"loc":[""],
+	"cha":["SHZ"]
+},
+
+
+"PINO":{
+	"net":"EC",
+	"cod":"PINO",
+	"loc":[""],
+	"cha":["SHZ"]
+},
+
+"RETU":{
+	"net":"EC",
+	"cod":"RETU",
+	"loc":[""],
+	"cha":["SHZ"]
+},
+
+"YANA":{
+	"net":"EC",
+	"cod":"YANA",
+	"loc":[""],
+	"cha":["SHZ"]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
